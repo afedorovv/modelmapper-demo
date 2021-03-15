@@ -34,18 +34,21 @@ public class Application {
                 .bookName("Приключения Оливера Твиста")
                 .author(authorEntity1)
                 .pages(220)
+                .comment("Отличный приключенчиский роман")
                 .index("ISBN: 978-5-91921-226-3")
                 .build();
         BookEntity bookEntity2 = BookEntity.builder()
                 .bookName("Гордость и предубеждение")
                 .author(authorEntity2)
                 .pages(400)
+                .comment("Занудная история про богатеев в Америке")
                 .index("ISBN: 978-5-699-52151-7")
                 .build();
         BookEntity bookEntity3 = BookEntity.builder()
                 .bookName("Фауст")
                 .author(authorEntity3)
                 .pages(270)
+                .comment("Пища для ума")
                 .index("ISBN: 5-699-07346-9")
                 .build();
 
