@@ -38,7 +38,7 @@ public class BookConvertor {
                 .include(HardCoverBookEntity.class, HardCoverBookDto.class);
         modelMapper.typeMap(AudioBookEntity.class, AudioBookDto.class)
                 .addMappings(mapper -> mapper.using(playTimeConverter).map(AudioBookEntity::getPlayLength, AudioBookDto::setPlayTime))
-                .setProvider(provisionRequest -> new AudioBookDto());
+                .addMapping(AudioBookEntity::getReader, AudioBookDto::setReader);
         modelMapper.typeMap(HardCoverBookEntity.class, HardCoverBookDto.class)
                 .addMapping(HardCoverBookEntity::getPages, HardCoverBookDto::setPages);
     }
